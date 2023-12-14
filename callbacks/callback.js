@@ -12,3 +12,5 @@ function greet(callback) {
 }
 
 greet(sayHi);
+// while performing async operations like data fetch, callbacks may result in a callback hell
+// thus promises are preferred over callbacks for better reasoning while trying to understand code
