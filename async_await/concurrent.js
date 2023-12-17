@@ -14,14 +14,14 @@ function resolveWorld() {
     })
 }
 
-// sequential execution
+// concurrent execution
 
 async function sequentialStart() {
     const hello = await resolveHello();
-    console.log(hello); // logs after 2 seconds
-
     const world = await resolveWorld();
-    console.log(world); // logs after 2 + 1 seconds
+    
+    console.log(hello);
+    console.log(world);
 }
 
 sequentialStart()
