@@ -16,12 +16,12 @@ function resolveWorld() {
 
 // concurrent execution
 
-async function sequentialStart() {
+async function concurrentStart() {
     const hello = await resolveHello();
     const world = await resolveWorld();
     
-    console.log(hello);
-    console.log(world);
+    console.log(hello); // logs after 2 seconds
+    console.log(world); // logs after 2 seconds
 }
 
-sequentialStart()
+concurrentStart()
